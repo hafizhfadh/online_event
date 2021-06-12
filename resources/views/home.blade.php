@@ -6,7 +6,7 @@
     @foreach ($events as $event)
         @if($event->status == 'publish')
         <div class="col-4">
-            <div class="card" style="width: 18rem;">
+            <div class="card">
                 <img src="{{$event->image}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{$event->event_name}}</h5>

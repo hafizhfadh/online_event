@@ -21,5 +21,6 @@ class EventController extends Controller
     public function save(Request $request)
     {
         $event = Event::create($request->all());
+        return redirect('/');
     }
 }
