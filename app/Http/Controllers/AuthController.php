@@ -49,15 +49,13 @@ class AuthController extends Controller
   
         if (Auth::check()) { // true sekalian session field di users nanti bisa dipanggil via Auth
             //Login Success
-            return redirect()->route('home');
+            return redirect('/');
   
         } else { // false
-  
             //Login Fail
             Session::flash('error', 'Email atau password salah');
             return redirect()->route('login');
         }
-  
     }
   
     public function showFormRegister()
