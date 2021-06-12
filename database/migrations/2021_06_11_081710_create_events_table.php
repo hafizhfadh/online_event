@@ -21,9 +21,13 @@ class CreateEventsTable extends Migration
             $table->string('hosted_by');
             $table->date('event_date');
             $table->timestamp('event_time');
+            $table->string('location');
             $table->string('event_description');
             $table->string('terms_and_condition');
             $table->string('status');
+            $table->string('number_of_ticket');
+            $table->string('price');
+            $table->string('ticket_description');
             $table->timestamps();
         });
     }

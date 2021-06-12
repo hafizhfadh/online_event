@@ -7,11 +7,11 @@
         @if($event->status == 'publish')
         <div class="col-4">
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="..." class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">{{$event->event_name}}</h5>
                     <p class="card-text">{{$event->event_description}}</p>
-                    <a href="{{ url('/event/show/') }}/{{$event->id}}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{ url('/event/show/') }}/{{$event->id}}" class="btn btn-primary">View Event</a>
                 </div>
             </div>
         </div>
