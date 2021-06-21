@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $events = Event::all();
+        $events = Event::orderBy("created_at","desc")->paginate(9)->withQueryString();
         return view('home', compact('events'));
     }
 }

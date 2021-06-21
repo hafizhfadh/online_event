@@ -20,14 +20,14 @@ class CreateEventsTable extends Migration
             $table->string('image');
             $table->string('hosted_by');
             $table->date('event_date');
-            $table->timestamp('event_time');
+            $table->string('event_time');
             $table->string('location');
             $table->text('event_description');
             $table->text('terms_and_condition');
             $table->string('status');
             $table->string('number_of_ticket');
             $table->string('price');
-            $table->string('ticket_description');
+            $table->text('ticket_description');
             $table->timestamps();
         });
     }

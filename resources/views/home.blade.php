@@ -5,11 +5,11 @@
     <div class="row">
     @foreach ($events as $event)
         @if($event->status == 'publish')
-        <div class="col-4">
+        <div class="col-4 py-4">
             <div class="card">
-                <img src="{{$event->image}}" class="card-img-top" alt="...">
+                <img src="/storage/images/{{$event->image}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{{$event->event_name}}</h5>
+                    <h5 class="card-title text-bolder">{{$event->event_name}}</h5>
                     <p class="card-text">{{$event->event_description}}</p>
                 </div>
                 <div class="card-footer">
@@ -22,5 +22,8 @@
         @endif
     @endforeach
     </div>
+    <div class="d-flex justify-content-center">
+        {!! $events->links() !!}
+    </div> 
 </div>
 @endsection

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container pt-2">
-    <form action="{{ route('event.save') }}" method="POST">
+    <form action="{{ route('event.save') }}" method="POST" enctype="multipart/form-data">
     @csrf
         <!--  General -->
         <div class="form-group">
