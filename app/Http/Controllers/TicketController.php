@@ -31,7 +31,7 @@ class TicketController extends Controller
             'price' => $event->price,
         ]);
 
-        redirect()->away('ticket/print/'.$ticket->id);
+        return redirect('ticket/print/'.$ticket->id);
     }
 
     public function print($id)
